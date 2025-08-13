@@ -6,27 +6,39 @@ import egyptianArt from "@/assets/egyptian-art.jpg";
 const exhibitions = [
   {
     id: 1,
-    title: "Ancient Civilizations",
-    description: "Journey through time with artifacts from Greek, Roman, and Byzantine empires. Discover the artistic mastery that shaped our world.",
+    title: "Indus Valley Chronicles",
+    description: "Unveil the mysteries of the world's oldest urban civilization. Explore seals, pottery, and urban planning that predated other civilizations by millennia.",
     image: ancientArt,
-    period: "3000 BCE - 500 CE",
-    pieces: "245 pieces"
+    period: "3300 - 1300 BCE",
+    pieces: "500+ artifacts",
+    category: "Ancient Heritage"
   },
   {
     id: 2,
-    title: "Modern Masterpieces",
-    description: "Experience the revolutionary movements that defined the 20th century, from Impressionism to Abstract Expressionism.",
+    title: "Lost Kingdoms of India",
+    description: "Discover forgotten dynasties, hidden capitals, and untold stories of rulers whose legacies shaped regional cultures across the subcontinent.",
     image: modernArt,
-    period: "1850 - 1980",
-    pieces: "180 pieces"
+    period: "300 - 1500 CE",
+    pieces: "350+ stories",
+    category: "Royal Heritage"
   },
   {
     id: 3,
-    title: "Egyptian Treasures",
-    description: "Uncover the mysteries of ancient Egypt through golden artifacts, hieroglyphic texts, and royal treasures.",
+    title: "Folk Wisdom & Traditions",
+    description: "Experience the living heritage of India's diverse communities - their crafts, festivals, oral traditions, and timeless wisdom passed through generations.",
     image: egyptianArt,
-    period: "3100 BCE - 30 CE",
-    pieces: "320 pieces"
+    period: "Timeless",
+    pieces: "200+ traditions",
+    category: "Living Culture"
+  },
+  {
+    id: 4,
+    title: "Women Warriors & Sages",
+    description: "Celebrate the untold stories of India's remarkable women - from fearless queens and warriors to pioneering scholars and spiritual leaders.",
+    image: ancientArt,
+    period: "Ancient - Modern",
+    pieces: "150+ biographies",
+    category: "Hidden Histories"
   }
 ];
 
@@ -36,14 +48,14 @@ const FeaturedExhibitions = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
-            Featured Exhibitions
+            Journey Through India's Soul
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Immerse yourself in carefully curated collections that span millennia of human creativity and cultural expression.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Explore the untold narratives, forgotten heroes, and hidden treasures that reveal the true essence of India's incredible cultural heritage.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {exhibitions.map((exhibition, index) => (
             <div 
               key={exhibition.id} 
@@ -58,9 +70,12 @@ const FeaturedExhibitions = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-museum-blue/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex justify-between items-center text-sm">
+                  <div className="flex justify-between items-center text-sm mb-2">
                     <span>{exhibition.period}</span>
                     <span>{exhibition.pieces}</span>
+                  </div>
+                  <div className="text-xs bg-museum-gold/20 px-2 py-1 rounded-full backdrop-blur-sm">
+                    {exhibition.category}
                   </div>
                 </div>
               </div>
@@ -73,7 +88,7 @@ const FeaturedExhibitions = () => {
                   {exhibition.description}
                 </p>
                 <Button variant="ghost" className="group-hover:text-accent transition-colors">
-                  Explore Exhibition →
+                  Discover Stories →
                 </Button>
               </div>
             </div>
@@ -82,7 +97,7 @@ const FeaturedExhibitions = () => {
         
         <div className="text-center mt-12">
           <Button variant="museum" size="lg">
-            View All Exhibitions
+            Explore All Collections
           </Button>
         </div>
       </div>

@@ -7,30 +7,30 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in">
             <div className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-6">
-              Digital Innovation
+              Heritage Preservation
             </div>
             
             <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6">
-              Art Without Boundaries
+              Preserving India's Soul Stories
             </h2>
             
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Artisan Digital Museum breaks down the walls between you and the world's greatest artistic treasures. 
-              Our cutting-edge platform brings centuries of human creativity directly to your screen with unprecedented 
-              detail and immersive experiences.
+              Every temple stone, every folk song, every grandmother's tale holds the essence of India. 
+              We're on a mission to collect, preserve, and share the untold stories that make India truly incredible - 
+              stories that history books missed but hearts remember.
             </p>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              From ancient artifacts to contemporary masterpieces, we've partnered with leading institutions 
-              worldwide to create the most comprehensive digital art experience ever assembled.
+              From forgotten kingdoms to living traditions, from unsung heroes to mystical legends, 
+              we create an immersive digital sanctuary where India's true heritage lives forever.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="museum" size="lg">
-                Learn Our Story
+                Our Mission
               </Button>
               <Button variant="outline" size="lg">
-                Partner Museums
+                Community Stories
               </Button>
             </div>
           </div>
@@ -38,33 +38,33 @@ const About = () => {
           <div className="animate-slide-up space-y-6">
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-card p-6 rounded-lg shadow-[var(--shadow-museum)]">
-                <div className="text-3xl font-playfair font-bold text-accent mb-2">4K</div>
-                <div className="text-sm text-muted-foreground">Ultra HD Detail</div>
+                <div className="text-3xl font-playfair font-bold text-accent mb-2">5000+</div>
+                <div className="text-sm text-muted-foreground">Years of History</div>
               </div>
               
               <div className="bg-card p-6 rounded-lg shadow-[var(--shadow-museum)]">
-                <div className="text-3xl font-playfair font-bold text-accent mb-2">VR</div>
-                <div className="text-sm text-muted-foreground">Virtual Reality</div>
+                <div className="text-3xl font-playfair font-bold text-accent mb-2">750+</div>
+                <div className="text-sm text-muted-foreground">Languages</div>
               </div>
               
               <div className="bg-card p-6 rounded-lg shadow-[var(--shadow-museum)]">
-                <div className="text-3xl font-playfair font-bold text-accent mb-2">AI</div>
-                <div className="text-sm text-muted-foreground">Powered Guides</div>
+                <div className="text-3xl font-playfair font-bold text-accent mb-2">28</div>
+                <div className="text-sm text-muted-foreground">States Explored</div>
               </div>
               
               <div className="bg-card p-6 rounded-lg shadow-[var(--shadow-museum)]">
-                <div className="text-3xl font-playfair font-bold text-accent mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Always Open</div>
+                <div className="text-3xl font-playfair font-bold text-accent mb-2">∞</div>
+                <div className="text-sm text-muted-foreground">Stories to Tell</div>
               </div>
             </div>
             
             <div className="bg-gradient-to-r from-accent/10 to-museum-gold/10 p-8 rounded-lg border border-accent/20">
               <h3 className="text-xl font-playfair font-semibold mb-3">
-                Experience Art Like Never Before
+                Every Story Matters
               </h3>
               <p className="text-muted-foreground">
-                Our proprietary scanning technology captures artworks at microscopic detail, 
-                revealing brushstrokes, textures, and details invisible to the naked eye.
+                Through community contributions, scholarly research, and cutting-edge technology, 
+                we ensure that no Indian story remains untold, no tradition forgotten.
               </p>
             </div>
           </div>

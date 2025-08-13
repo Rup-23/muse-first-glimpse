@@ -7,30 +7,30 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-museum-gold to-accent rounded-full"></div>
-            <span className="text-xl font-playfair font-semibold">Artisan Museum</span>
+            <span className="text-xl font-playfair font-semibold">Bharat Stories</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#exhibitions" className="text-foreground hover:text-accent transition-colors">
-              Exhibitions
-            </a>
-            <a href="#collections" className="text-foreground hover:text-accent transition-colors">
               Collections
             </a>
-            <a href="#about" className="text-foreground hover:text-accent transition-colors">
-              About
+            <a href="#regions" className="text-foreground hover:text-accent transition-colors">
+              Regions
             </a>
-            <a href="#visit" className="text-foreground hover:text-accent transition-colors">
-              Visit
+            <a href="#voices" className="text-foreground hover:text-accent transition-colors">
+              Untold Stories
+            </a>
+            <a href="#about" className="text-foreground hover:text-accent transition-colors">
+              Heritage
             </a>
           </nav>
           
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="sm">
-              Search
+              Search Stories
             </Button>
             <Button variant="museum" size="sm">
-              Virtual Tour
+              Begin Journey
             </Button>
           </div>
         </div>
