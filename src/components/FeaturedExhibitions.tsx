@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import ancientArt from "@/assets/ancient-art.jpg";
 import modernArt from "@/assets/modern-art.jpg";
 import egyptianArt from "@/assets/egyptian-art.jpg";
@@ -6,6 +7,7 @@ import egyptianArt from "@/assets/egyptian-art.jpg";
 const exhibitions = [
   {
     id: 1,
+    slug: "indus-valley",
     title: "Indus Valley Chronicles",
     description: "Unveil the mysteries of the world's oldest urban civilization. Explore seals, pottery, and urban planning that predated other civilizations by millennia.",
     image: ancientArt,
@@ -15,6 +17,7 @@ const exhibitions = [
   },
   {
     id: 2,
+    slug: "lost-kingdoms",
     title: "Lost Kingdoms of India",
     description: "Discover forgotten dynasties, hidden capitals, and untold stories of rulers whose legacies shaped regional cultures across the subcontinent.",
     image: modernArt,
@@ -24,6 +27,7 @@ const exhibitions = [
   },
   {
     id: 3,
+    slug: "folk-wisdom",
     title: "Folk Wisdom & Traditions",
     description: "Experience the living heritage of India's diverse communities - their crafts, festivals, oral traditions, and timeless wisdom passed through generations.",
     image: egyptianArt,
@@ -33,6 +37,7 @@ const exhibitions = [
   },
   {
     id: 4,
+    slug: "women-warriors",
     title: "Women Warriors & Sages",
     description: "Celebrate the untold stories of India's remarkable women - from fearless queens and warriors to pioneering scholars and spiritual leaders.",
     image: ancientArt,
@@ -87,9 +92,11 @@ const FeaturedExhibitions = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {exhibition.description}
                 </p>
-                <Button variant="ghost" className="group-hover:text-accent transition-colors">
-                  Discover Stories →
-                </Button>
+                <Link to={`/exhibition/${exhibition.slug}`}>
+                  <Button variant="ghost" className="group-hover:text-accent transition-colors">
+                    Discover Stories →
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

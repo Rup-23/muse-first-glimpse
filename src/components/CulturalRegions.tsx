@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const regions = [
   {
     id: 1,
+    slug: "himalayan-heritage",
     name: "Himalayan Heritage",
     description: "Sacred monasteries, ancient trade routes, and mountain cultures of the world's highest peaks",
     highlights: ["Ladakh Monasteries", "Tibetan Buddhism", "Silk Route Stories"],
@@ -10,6 +12,7 @@ const regions = [
   },
   {
     id: 2,
+    slug: "gangetic-plains",
     name: "Gangetic Plains",
     description: "Cradle of civilization where spirituality, learning, and culture flourished for millennia",
     highlights: ["Varanasi Traditions", "Buddhist Heritage", "Mughal Legacy"],
@@ -17,6 +20,7 @@ const regions = [
   },
   {
     id: 3,
+    slug: "western-deserts",
     name: "Western Deserts",
     description: "Royal grandeur, warrior traditions, and resilient communities of the Thar",
     highlights: ["Rajputana Glory", "Folk Music", "Desert Crafts"],
@@ -24,6 +28,7 @@ const regions = [
   },
   {
     id: 4,
+    slug: "deccan-plateau",
     name: "Deccan Plateau",
     description: "Medieval empires, rock-cut architecture, and diverse cultural synthesis",
     highlights: ["Ajanta Ellora", "Vijayanagara", "Sufi Traditions"],
@@ -31,6 +36,7 @@ const regions = [
   },
   {
     id: 5,
+    slug: "southern-kingdoms",
     name: "Southern Kingdoms",
     description: "Temple architecture, classical arts, and maritime trade connections",
     highlights: ["Chola Bronzes", "Carnatic Music", "Spice Routes"],
@@ -38,6 +44,7 @@ const regions = [
   },
   {
     id: 6,
+    slug: "eastern-mystique",
     name: "Eastern Mystique",
     description: "Literary renaissance, spiritual movements, and artistic innovations",
     highlights: ["Bengali Renaissance", "Jagannath Culture", "Tea Gardens"],
@@ -84,9 +91,11 @@ const CulturalRegions = () => {
                   ))}
                 </div>
                 
-                <Button variant="ghost" className="group-hover:text-accent transition-colors">
-                  Explore Region →
-                </Button>
+                <Link to={`/region/${region.slug}`}>
+                  <Button variant="ghost" className="group-hover:text-accent transition-colors">
+                    Explore Region →
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}

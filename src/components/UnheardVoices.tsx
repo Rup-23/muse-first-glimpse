@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const voices = [
   {
     id: 1,
+    slug: "forgotten-warriors",
     category: "Forgotten Warriors",
     title: "The Brave Hearts History Forgot",
     description: "Stories of courage from unsung heroes who shaped India's destiny",
@@ -11,6 +13,7 @@ const voices = [
   },
   {
     id: 2,
+    slug: "women-pioneers",
     category: "Women Pioneers",
     title: "She Who Dared Before Her Time",
     description: "Remarkable women who broke barriers centuries before feminism",
@@ -19,6 +22,7 @@ const voices = [
   },
   {
     id: 3,
+    slug: "master-craftspeople",
     category: "Master Craftspeople",
     title: "Hands That Created Wonders",
     description: "Artisan families who perfected crafts over generations",
@@ -27,6 +31,7 @@ const voices = [
   },
   {
     id: 4,
+    slug: "spiritual-rebels",
     category: "Spiritual Rebels",
     title: "Those Who Questioned Everything",
     description: "Reformers and philosophers who challenged orthodox thinking",
@@ -35,6 +40,7 @@ const voices = [
   },
   {
     id: 5,
+    slug: "tribal-wisdom",
     category: "Tribal Wisdom",
     title: "Keepers of Ancient Knowledge",
     description: "Indigenous communities preserving age-old wisdom",
@@ -43,6 +49,7 @@ const voices = [
   },
   {
     id: 6,
+    slug: "revolutionary-poets",
     category: "Revolutionary Poets",
     title: "Words That Ignited Freedom",
     description: "Poets whose verses became anthems of resistance",
@@ -98,9 +105,11 @@ const UnheardVoices = () => {
                   ))}
                 </div>
                 
-                <Button variant="ghost" size="sm" className="group-hover:text-accent transition-colors text-xs">
-                  Discover Their Stories →
-                </Button>
+                <Link to={`/voice/${voice.slug}`}>
+                  <Button variant="ghost" size="sm" className="group-hover:text-accent transition-colors text-xs">
+                    Discover Their Stories →
+                  </Button>
+                </Link>
               </div>
             </div>
           ))}
